@@ -5,7 +5,7 @@
 // Recursively
 ListNode* reverseList(ListNode* head)
 {
-    if ( head->next == NULL )
+    if ( head == NULL || head->next == NULL )
     {
         return head;
     }
@@ -14,3 +14,24 @@ ListNode* reverseList(ListNode* head)
     head->next = NULL;
     return reverse;
 }
+
+// Iteratively - Fastest Way
+/*
+ListNode* reverseList(ListNode* head)
+{
+    if ( head == NULL || head->next == NULL )
+    {
+        return head;
+    }
+    ListNode* next = head->next;
+    head->next = NULL;
+    while ( next != NULL )
+    {
+        ListNode* nextUp = next->next;
+        next->next = head;
+        head = next;
+        next = nextUp;
+    }
+    return head;
+}
+*/
