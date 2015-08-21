@@ -1,4 +1,4 @@
-#include "linkedList.h" 
+#include "linked_list.h" 
 
 ListNode* deleteNode(ListNode* head, int d)
 {

@@ -2,6 +2,7 @@
 #define LINKEDLIST_H
 
 #include <iostream>
+#include <unordered_map>
 
 // Linked list struct
 struct ListNode {
