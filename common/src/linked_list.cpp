@@ -1,5 +1,8 @@
 #include "linked_list.h" 
 
+// Doubly linked list functions are commented out
+// Uncomment them if you want to use a doubly linked list
+
 ListNode* deleteNode(ListNode* head, int d)
 {
     ListNode* n = head;
@@ -16,7 +19,7 @@ ListNode* deleteNode(ListNode* head, int d)
         if (n->next->data == d)
         {
             ListNode* new_next = n->next->next;
-            n->next->next->prev = n->next->prev;
+            // n->next->next->prev = n->next->prev;
             delete n->next;
             n->next = new_next;
             return head;
@@ -39,8 +42,9 @@ void deleteList(ListNode* head)
 {
     while (head->next != NULL)
     {
+        ListNode* toDelete = head;
         head = head->next;
-        delete head->prev;
+        delete toDelete;
     }
     delete head;
 }

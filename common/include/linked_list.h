@@ -2,12 +2,15 @@
 #define LINKEDLIST_H
 
 #include <iostream>
-#include <unordered_map>
+
+// Doubly linked list functions are commented out
+// Uncomment them if you want to assume all questions
+// use a doubly linked list
 
 // Linked list struct
 struct ListNode {
     ListNode* next;
-    ListNode* prev;
+    // ListNode* prev;
     int data;
 
     // Constructs the linked list with the given start node
@@ -15,7 +18,7 @@ struct ListNode {
     {
         data = d;
         next = NULL;
-        prev = NULL;
+        // prev = NULL;
     }
 
     // Appends a new node with the data d
@@ -28,7 +31,7 @@ struct ListNode {
             n = n->next;
         }
         n->next = end;
-        end->prev = n;
+        // end->prev = n;
     }
 
     // Appends an entire node to the linked list
@@ -40,7 +43,7 @@ struct ListNode {
             n = n->next;
         }
         n->next = node;
-        node->prev = n;
+        // node->prev = n;
     }
 };
 

@@ -3,6 +3,7 @@
 // Reverse a singly linked list
 //
 // Recursively
+//
 ListNode* reverseList(ListNode* head)
 {
     if ( head == NULL || head->next == NULL )
@@ -16,6 +17,7 @@ ListNode* reverseList(ListNode* head)
 }
 
 // Iteratively - Fastest Way
+//
 ListNode* reverseListI(ListNode* head)
 {
     if ( head == NULL || head->next == NULL )

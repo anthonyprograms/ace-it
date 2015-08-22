@@ -6,6 +6,7 @@
 // copy it over to the middle's data. Middle's next
 // will then be set to next's next. Then we can
 // just delete the next node
+//
 void deleteMiddle(ListNode* middle)
 {
     if ( middle == NULL )
