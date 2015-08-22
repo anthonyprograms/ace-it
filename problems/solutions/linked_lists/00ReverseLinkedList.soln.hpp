@@ -16,8 +16,7 @@ ListNode* reverseList(ListNode* head)
 }
 
 // Iteratively - Fastest Way
-/*
-ListNode* reverseList(ListNode* head)
+ListNode* reverseListI(ListNode* head)
 {
     if ( head == NULL || head->next == NULL )
     {
@@ -34,4 +33,3 @@ ListNode* reverseList(ListNode* head)
     }
     return head;
 }
-*/
