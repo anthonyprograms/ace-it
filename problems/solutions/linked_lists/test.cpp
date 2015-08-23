@@ -4,6 +4,7 @@
 #include "03FindKthElement.soln.hpp"
 #include "04PartitionList.soln.hpp"
 #include "05FindLoop.soln.hpp"
+#include "06SumList.soln.hpp"
 #include <iostream>
 
 /*
@@ -53,6 +54,17 @@ int main()
 
     std::cout << std::endl << "Find the loop!" << std::endl;
     std::cout << findLoop(head)->data << std::endl << std::endl;
+
+    ListNode* num1 = new ListNode(4);
+    num1->appendToTail(1);
+    num1->appendToTail(5);
+
+    ListNode* num2 = new ListNode(6);
+    num2->appendToTail(1);
+    num2->appendToTail(2);
+
+    std::cout << std::endl << "Sum List!" << std::endl;
+    printList(sumListReverse(num1, num2));
 
     return 0;
 }
