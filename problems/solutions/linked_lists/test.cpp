@@ -5,6 +5,7 @@
 #include "04PartitionList.soln.hpp"
 #include "05FindLoop.soln.hpp"
 #include "06SumList.soln.hpp"
+#include "07PalindromeList.soln.hpp"
 #include <iostream>
 
 /*
@@ -65,6 +66,26 @@ int main()
 
     std::cout << std::endl << "Sum List!" << std::endl;
     printList(sumListReverse(num1, num2));
+
+    std::cout << std::endl << "Palindrome List!" << std::endl;
+    ListNode* palindrome = new ListNode(1);
+    palindrome->appendToTail(2);
+    palindrome->appendToTail(3);
+    palindrome->appendToTail(3);
+    palindrome->appendToTail(2);
+    palindrome->appendToTail(1);
+
+    ListNode* nonpalindrome = new ListNode(1);
+    nonpalindrome->appendToTail(1);
+    nonpalindrome->appendToTail(2);
+    nonpalindrome->appendToTail(3);
+    nonpalindrome->appendToTail(2);
+    nonpalindrome->appendToTail(1);
+
+    if ( isPalindrome(palindrome) )
+        std::cout << "TRUE" << std::endl;
+    if ( !isPalindrome(nonpalindrome) )
+        std::cout << "FALSE" << std::endl;
 
     return 0;
 }
