@@ -3,6 +3,7 @@
 #include "02DeleteMiddle.soln.hpp"
 #include "03FindKthElement.soln.hpp"
 #include "04PartitionList.soln.hpp"
+#include "05FindLoop.soln.hpp"
 #include <iostream>
 
 /*
@@ -35,6 +36,23 @@ int main()
     std::cout << std::endl << "Remove Duplicates" << std::endl;
     removeDuplicatesHash(head);
     printList(head);
+    deleteList(head);
+    
+    
+    head = new ListNode(1);
+    ListNode* loop = new ListNode(9);
+    head->appendToTail(2);
+    head->appendToTail(3);
+    head->appendToTail(4);
+    head->appendToTail(loop);
+    head->appendToTail(4);
+    head->appendToTail(5);
+    head->appendToTail(3);
+    head->appendToTail(4);
+    head->appendToTail(loop);
+
+    std::cout << std::endl << "Find the loop!" << std::endl;
+    std::cout << findLoop(head)->data << std::endl << std::endl;
 
     return 0;
 }
