@@ -1,11 +1,10 @@
-#include "00strings_and_ararys.soln.hpp"
+#include "01SubstringPalindrome.soln.hpp"
 
 int main()
 {
-    string first = "something";
-    string second = "ghinteosm";
-
-    cout << permutation(first, second) << endl;
+    std::string palindrome = "aabbbaa";
+    substringPalindrome(palindrome);
+    substringPalindrome2(palindrome);
 
     return 0;
 }
